@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Chorolpeth Map showing United States Educational Attainment in different counties</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/4.2.2/d3.min.js"></script>
+
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" />
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link rel="stylesheet" href="./styles.css">
+
+    <script src="https://unpkg.com/topojson@3"></script>
+
+</head>
+
+<body>
+    <h2 id='title'>USA Adult Education</h2>
+    <div id='container'>
+        <svg id='canvas'>
+
+        </svg>
+        <div id='rightSide'>
+            <div id='tooltip'>
+
+            </div>
+            <svg id='legend'>
+
+                <g>
+                    <rect x="10" y="0" width="40" height="40" fill='#CFE2CE'></rect>
+                    <text x="60" y="20" fill="white">Less than 15%</text>
+                </g>
+                <g>
+                    <rect x="10" y="40" width="40" height="40" fill='#012909'></rect>
+                    <text x="60" y="60" fill="white">15% than 30%</text>
+                </g>
+                <g>
+                    <rect x="10" y="80" width="40" height="40" fill="lightgreen"></rect>
+                    <text x="60" y="100" fill="white">30% to 45%</text>
+                </g>
+                <g>
+                    <rect x="10" y="120" width="40" height="40" fill='#6B9D4A'></rect>
+                    <text x="60" y="140" fill="white">More than 45%</text>
+                </g>
+
+            </svg>
+            <div id='description'>Percentage of adults age 25 and older with a bachelor's degree or higher (2010-2014).
+                Source: <a href='https://www.ers.usda.gov/data-products/county-level-data-sets/download-data.aspx'>USDA
+                    Economic Research
+                    Service</a></div>
+
+        </div>
+
+    </div>
+    <script src="./index.jsx" type="text/babel"></script>
+</body>
+
+</html>
